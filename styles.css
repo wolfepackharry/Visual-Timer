@@ -20,3 +20,10 @@ button {
   padding: 0.5rem 1rem;
   margin: 0.25rem;
 }
+
+.flash {
+  animation: flash 0.5s steps(1) infinite;
+}
+@keyframes flash {
+  50% { opacity: 0; }
+}
