@@ -87,4 +87,8 @@ resetBtn.addEventListener("click", () =>
     currentSeconds = totalSeconds;
     display.textContent = (totalSeconds / 60) + ":00";
   }
+  else{
+    currentSeconds = totalSeconds;
+    display.textContent = (totalSeconds / 60) + ":00";
+  }
 })
