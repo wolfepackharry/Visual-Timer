@@ -1,28 +1,66 @@
 #display {
-  color: black;
+  color: rgb(23, 18, 94);
   font-size: 8rem;
   font-weight: bold;
   text-align: center;
   padding-top: 10rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
+  
+}
+
+#minutesRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#minutesLabel{
+  font-weight: bold;
+  color: rgb(23, 18, 94);
+  font-size: 2rem;
+}
+
+body{
+  background-color:snow;
 }
 
 main {
   text-align: center;
-
 }
 
 #minutes {
   font-size: 1.2rem;
-  width: 4rem;
-  text-align: center;
+  width: 10rem;
+  height: 2rem;
+  text-align:left;
+  background-color: blanchedalmond;
+  color: rgb(23, 18, 94);
+}
 
+#progressBarContainer {
+  width: 100%;
+  height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  background-color: blanchedalmond;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+#progressBar {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(23, 18, 94);
+  transition: width 0.3s;
 }
 
 button {
   font-size: 1.25rem;
   padding: 0.5rem 1rem;
   margin: 0.25rem;
+  color: rgb(23, 18, 94);
+  background-color: blanchedalmond;
 }
 
 .flash {

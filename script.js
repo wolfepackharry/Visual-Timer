@@ -3,6 +3,7 @@ const minutesInput = document.getElementById("minutes");
 const startBtn = document.getElementById("startBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
+const progressBar = document.getElementById("progressBar");
 let totalSeconds = minutesInput.value * 60;
 let currentSeconds = totalSeconds;
 let intervalID = null;
@@ -13,7 +14,9 @@ minutesInput.addEventListener("change", () =>
   if (input < 0) input = 1;
   if (currentSeconds == totalSeconds)
   {
-    display.textContent = input + ":00"; 
+    display.textContent = input + ":00";
+    let value = (currentSeconds / totalSeconds) * 100
+    progressBar.style.width = value + "%";
     totalSeconds = input * 60;
     currentSeconds = totalSeconds;
   }
@@ -24,6 +27,8 @@ minutesInput.addEventListener("change", () =>
     totalSeconds = input * 60;
     currentSeconds = totalSeconds;
     display.textContent = input + ":00"; 
+    let value = (currentSeconds / totalSeconds) * 100
+    progressBar.style.width = value + "%";
     if (display.classList.contains("flash"))
     {
       display.classList.remove("flash");
@@ -42,6 +47,8 @@ startBtn.addEventListener("click", () =>
           {
             currentSeconds = totalSeconds;
             display.textContent = (totalSeconds / 60) + ":00";
+            let value = (currentSeconds / totalSeconds) * 100
+            progressBar.style.width = value + "%";
             display.classList.remove("flash");
           }
           else
@@ -61,6 +68,8 @@ startBtn.addEventListener("click", () =>
         if (minutes < 10){addedMinuteText = "0"}
         if (seconds < 10){addedSecondText = "0"}
         display.textContent = addedMinuteText + minutes + ":" + addedSecondText + seconds;
+        let value = (currentSeconds / totalSeconds) * 100
+        progressBar.style.width = value + "%";
       }, 1000);
     }
 })
@@ -86,9 +95,13 @@ resetBtn.addEventListener("click", () =>
     intervalID = null;
     currentSeconds = totalSeconds;
     display.textContent = (totalSeconds / 60) + ":00";
+    let value = (currentSeconds / totalSeconds) * 100
+    progressBar.style.width = value + "%";
   }
   else{
     currentSeconds = totalSeconds;
     display.textContent = (totalSeconds / 60) + ":00";
+    let value = (currentSeconds / totalSeconds) * 100
+    progressBar.style.width = value + "%";
   }
 })

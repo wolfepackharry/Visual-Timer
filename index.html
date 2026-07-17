@@ -8,13 +8,19 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    </nav>
     <main>
       <div id="display">05:00</div>
-      <input id="minutes" type="number" value="5" min="1" />
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div>
+      <div id="minutesRow">
+        <input id="minutes" type="number" value="5" min="1" />
+        <div id="minutesLabel">minutes</div>
+      </div>
       <button id="startBtn">Start</button>
       <button id="pauseBtn">Pause</button>
       <button id="resetBtn">Reset</button>
+      
     </main>
   </body>
 </html>
