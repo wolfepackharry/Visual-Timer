@@ -8,4 +8,4 @@
 4. Pause or Reset anytime.
 
 ## Screenshot
-![Timer app screenshot](TimerAppScreenshot.jpg)
+![Timer app screenshot](TimerAppScreenshot.png)
