@@ -42,6 +42,8 @@ main {
 #progressBarContainer {
   width: 100%;
   height: 2rem;
+  max-width: 400px;
+  min-width: 400px;
   margin: 0 auto;
   margin-bottom: 4rem;
   background-color: blanchedalmond;
