@@ -3,7 +3,7 @@ const minutesInput = document.getElementById("minutes");
 const startBtn = document.getElementById("startBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
-let totalSeconds = 0;
+let totalSeconds = minutesInput.value * 60;
 let currentSeconds = totalSeconds;
 let intervalID = null;
 
